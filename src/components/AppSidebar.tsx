@@ -15,34 +15,29 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const menuItems = [
   {
-    title: "Заказы",
-    icon: "ShoppingCart",
+    title: "Дашборд",
+    icon: "LayoutDashboard",
+    path: "/"
+  },
+  {
+    title: "Рабочий стол проверки",
+    icon: "ClipboardCheck",
+    path: "/workspace"
+  },
+  {
+    title: "Детали SKU",
+    icon: "Search",
+    path: "/sku-details"
+  },
+  {
+    title: "Журнал заказов",
+    icon: "FileText",
     path: "/orders"
   },
   {
-    title: "Приёмка",
-    icon: "PackageCheck",
-    path: "/receiving"
-  },
-  {
-    title: "Склад",
-    icon: "Warehouse",
-    path: "/warehouse"
-  },
-  {
-    title: "Списания",
-    icon: "FileX",
-    path: "/writeoffs"
-  },
-  {
-    title: "Календарь",
-    icon: "Calendar",
-    path: "/calendar"
-  },
-  {
-    title: "Справочники",
-    icon: "BookOpen",
-    path: "/references"
+    title: "Настройки",
+    icon: "Settings",
+    path: "/settings"
   }
 ];
 
@@ -61,8 +56,8 @@ export function AppSidebar() {
             <Icon name="Package" size={24} className="text-primary-foreground" />
           </div>
           <div>
-            <h2 className="font-bold text-lg text-sidebar-foreground">OrderFlow</h2>
-            <p className="text-xs text-sidebar-foreground/60">Система управления</p>
+            <h2 className="font-bold text-lg text-sidebar-foreground">Автозаказ РЦ</h2>
+            <p className="text-xs text-sidebar-foreground/60">Система автозаказа</p>
           </div>
         </button>
       </SidebarHeader>

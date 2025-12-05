@@ -6,8 +6,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
-import Index from "./pages/Index";
-import Recommendations from "./pages/Recommendations";
+import Dashboard from "./pages/Dashboard";
+import Workspace from "./pages/Workspace";
 import Orders from "./pages/Orders";
 import NotFound from "./pages/NotFound";
 import Icon from "@/components/ui/icon";
@@ -43,14 +43,11 @@ const App = () => (
             </header>
             <main className="flex-1 p-6 bg-background">
               <Routes>
-                <Route path="/" element={<Orders />} />
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/workspace" element={<Workspace />} />
+                <Route path="/sku-details" element={<div className="text-center py-12 text-muted-foreground"><p className="text-xl">Модуль "Детали SKU" в разработке</p></div>} />
                 <Route path="/orders" element={<Orders />} />
-                <Route path="/recommendations" element={<Recommendations />} />
-                <Route path="/receiving" element={<div className="text-center py-12 text-muted-foreground"><p className="text-xl">Модуль "Приёмка" в разработке</p></div>} />
-                <Route path="/warehouse" element={<div className="text-center py-12 text-muted-foreground"><p className="text-xl">Модуль "Склад" в разработке</p></div>} />
-                <Route path="/writeoffs" element={<div className="text-center py-12 text-muted-foreground"><p className="text-xl">Модуль "Списания" в разработке</p></div>} />
-                <Route path="/calendar" element={<div className="text-center py-12 text-muted-foreground"><p className="text-xl">Модуль "Календарь" в разработке</p></div>} />
-                <Route path="/references" element={<div className="text-center py-12 text-muted-foreground"><p className="text-xl">Модуль "Справочники" в разработке</p></div>} />
+                <Route path="/settings" element={<div className="text-center py-12 text-muted-foreground"><p className="text-xl">Модуль "Настройки" в разработке</p></div>} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
