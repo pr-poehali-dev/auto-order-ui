@@ -42,10 +42,10 @@ const Dashboard = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "critical": return "bg-destructive";
-      case "high": return "bg-warning";
-      case "medium": return "bg-primary";
-      case "low": return "bg-success";
+      case "critical": return "bg-[#9333EA]";
+      case "high": return "bg-[#A855F7]";
+      case "medium": return "bg-[#C084FC]";
+      case "low": return "bg-[#E9D5FF]";
       default: return "bg-muted";
     }
   };
@@ -164,19 +164,19 @@ const Dashboard = () => {
             </div>
             <div className="flex items-center justify-center gap-6 mt-6 pt-4 border-t border-border">
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded bg-destructive"></div>
+                <div className="w-3 h-3 rounded bg-[#9333EA]"></div>
                 <span className="text-xs text-muted-foreground">Критично</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded bg-warning"></div>
+                <div className="w-3 h-3 rounded bg-[#A855F7]"></div>
                 <span className="text-xs text-muted-foreground">Высокая</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded bg-primary"></div>
+                <div className="w-3 h-3 rounded bg-[#C084FC]"></div>
                 <span className="text-xs text-muted-foreground">Средняя</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded bg-success"></div>
+                <div className="w-3 h-3 rounded bg-[#E9D5FF]"></div>
                 <span className="text-xs text-muted-foreground">Низкая</span>
               </div>
             </div>

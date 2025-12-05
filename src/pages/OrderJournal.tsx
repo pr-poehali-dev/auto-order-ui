@@ -11,7 +11,7 @@ const OrderJournal = () => {
     {
       id: "ORD-2024-157",
       date: "05.12.2024",
-      supplier: "Молочный Дом",
+      supplier: "ИВЛ",
       status: "confirmed",
       amount: 145000,
       creationType: "auto",
@@ -21,7 +21,7 @@ const OrderJournal = () => {
     {
       id: "ORD-2024-156",
       date: "05.12.2024",
-      supplier: "Хлебный Мир",
+      supplier: "ИВЛ1",
       status: "sent",
       amount: 67000,
       creationType: "mixed",
@@ -31,7 +31,7 @@ const OrderJournal = () => {
     {
       id: "ORD-2024-155",
       date: "04.12.2024",
-      supplier: "Мясокомбинат №1",
+      supplier: "ИВЛ2",
       status: "draft",
       amount: 320000,
       creationType: "manual",
@@ -41,7 +41,7 @@ const OrderJournal = () => {
     {
       id: "ORD-2024-154",
       date: "04.12.2024",
-      supplier: "АгроПродукт",
+      supplier: "ИВЛ3",
       status: "confirmed",
       amount: 89000,
       creationType: "auto",
@@ -51,7 +51,7 @@ const OrderJournal = () => {
     {
       id: "ORD-2024-153",
       date: "03.12.2024",
-      supplier: "Молочный Дом",
+      supplier: "ИВЛ",
       status: "awaiting",
       amount: 178000,
       creationType: "auto",

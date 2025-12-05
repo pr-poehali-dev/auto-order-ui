@@ -13,7 +13,7 @@ const Settings = () => {
   const suppliers = [
     {
       id: 1,
-      name: "Молочный Дом",
+      name: "ИВЛ",
       deliveryDays: "ПН, СР, ПТ",
       leadTimeMin: 2,
       leadTimeMax: 3,
@@ -23,7 +23,7 @@ const Settings = () => {
     },
     {
       id: 2,
-      name: "Хлебный Мир",
+      name: "ИВЛ1",
       deliveryDays: "Ежедневно",
       leadTimeMin: 1,
       leadTimeMax: 1,
@@ -33,7 +33,7 @@ const Settings = () => {
     },
     {
       id: 3,
-      name: "Мясокомбинат №1",
+      name: "ИВЛ2",
       deliveryDays: "ВТ, ЧТ",
       leadTimeMin: 3,
       leadTimeMax: 5,
@@ -43,7 +43,7 @@ const Settings = () => {
     },
     {
       id: 4,
-      name: "АгроПродукт",
+      name: "ИВЛ3",
       deliveryDays: "ПН, ЧТ",
       leadTimeMin: 2,
       leadTimeMax: 4,
@@ -57,23 +57,23 @@ const Settings = () => {
     {
       id: 1,
       sku: "ПРМ-045",
-      name: "Колбаса премиум",
-      category: "Мясо",
+      name: "Кинг Нагетсы",
+      category: "Закуски",
       reason: "manual",
       comment: "Требуется ручной контроль качества"
     },
     {
       id: 2,
       sku: "СЗН-089",
-      name: "Арбузы",
-      category: "Овощи/Фрукты",
+      name: "Салат Цезарь",
+      category: "Салаты",
       reason: "seasonal",
       comment: "Сезонный товар с нестабильным спросом"
     },
     {
       id: 3,
       sku: "НАП-123",
-      name: "Квас специальный",
+      name: "Коктейль карамельный",
       category: "Напитки",
       reason: "withdrawal",
       comment: "Планируется вывод из ассортимента"
@@ -84,7 +84,7 @@ const Settings = () => {
     {
       date: "05.12.2024 14:30",
       user: "Иван Петров",
-      action: "Изменил минимальную партию для категории 'Молочные продукты'",
+      action: "Изменил минимальную партию для категории 'Бургеры'",
       oldValue: "50 шт.",
       newValue: "100 шт."
     },
@@ -98,7 +98,7 @@ const Settings = () => {
     {
       date: "03.12.2024 09:20",
       user: "Иван Петров",
-      action: "Изменил коэффициент агрессивности для категории 'Хлеб'",
+      action: "Изменил коэффициент агрессивности для категории 'Закуски'",
       oldValue: "Нейтральный",
       newValue: "Консервативный"
     }
@@ -226,9 +226,9 @@ const Settings = () => {
             <CardContent>
               <div className="space-y-4">
                 {[
-                  { category: "Молочные продукты", forecast: 14, method: "XYZ-анализ", aggr: "Нейтральный" },
-                  { category: "Хлебобулочные", forecast: 7, method: "Тренд", aggr: "Консервативный" },
-                  { category: "Мясо и птица", forecast: 14, method: "XYZ-анализ", aggr: "Агрессивный" }
+                  { category: "Бургеры", forecast: 14, method: "XYZ-анализ", aggr: "Нейтральный" },
+                  { category: "Закуски", forecast: 7, method: "Тренд", aggr: "Консервативный" },
+                  { category: "Напитки", forecast: 14, method: "XYZ-анализ", aggr: "Агрессивный" }
                 ].map((cat) => (
                   <div key={cat.category} className="grid grid-cols-4 gap-4 p-4 border rounded-lg">
                     <div>

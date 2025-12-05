@@ -16,9 +16,9 @@ const SkuDetails = () => {
   const [minOrderQty, setMinOrderQty] = useState(50);
 
   const skuData = {
-    sku: "МЛК-001",
-    name: "Молоко 3.2% 1л",
-    category: "Молочные продукты",
+    sku: "BUN-001",
+    name: "Булки для Воппера",
+    category: "Бургеры",
     currentStock: 45,
     forecast: 35,
     safetyStock: 10,

@@ -12,71 +12,71 @@ const Workspace = () => {
   const recommendations = [
     {
       id: 1,
-      sku: "МЛК-001",
-      name: "Молоко 3.2% 1л",
-      category: "Молочные продукты",
+      sku: "BUN-001",
+      name: "Булки для Воппера",
+      category: "Бургеры",
       currentStock: 45,
       forecast: 280,
       inTransit: 0,
       rop: 150,
       recommendedOrder: 350,
-      supplier: "Молочный Дом",
+      supplier: "ИВЛ",
       status: "new",
       alert: "high"
     },
     {
       id: 2,
-      sku: "ХЛБ-024",
-      name: "Хлеб белый 500г",
-      category: "Хлебобулочные",
+      sku: "FRY-024",
+      name: "Картофель фри замороженный",
+      category: "Гарниры",
       currentStock: 120,
       forecast: 450,
       inTransit: 100,
       rop: 200,
       recommendedOrder: 400,
-      supplier: "Хлебный Мир",
+      supplier: "ИВЛ1",
       status: "new",
       alert: "normal"
     },
     {
       id: 3,
-      sku: "МСО-156",
-      name: "Говядина охл. 1кг",
-      category: "Мясо",
+      sku: "PAT-156",
+      name: "Котлета говяжья",
+      category: "Бургеры",
       currentStock: 12,
       forecast: 85,
       inTransit: 0,
       rop: 50,
       recommendedOrder: 100,
-      supplier: "Мясокомбинат №1",
+      supplier: "ИВЛ2",
       status: "attention",
       alert: "critical"
     },
     {
       id: 4,
-      sku: "ОВЩ-089",
-      name: "Картофель 2кг",
-      category: "Овощи",
+      sku: "SHK-089",
+      name: "Смесь для молочного коктейля",
+      category: "Напитки",
       currentStock: 230,
       forecast: 320,
       inTransit: 50,
       rop: 180,
       recommendedOrder: 150,
-      supplier: "АгроПродукт",
+      supplier: "ИВЛ3",
       status: "new",
       alert: "normal"
     },
     {
       id: 5,
-      sku: "СЫР-042",
-      name: "Сыр Российский 45%",
-      category: "Молочные продукты",
+      sku: "CHS-042",
+      name: "Сыр Чеддер ломтики",
+      category: "Бургеры",
       currentStock: 78,
       forecast: 195,
       inTransit: 0,
       rop: 120,
       recommendedOrder: 180,
-      supplier: "Молочный Дом",
+      supplier: "ИВЛ",
       status: "attention",
       alert: "high"
     }
@@ -285,10 +285,10 @@ const Workspace = () => {
                               <SelectValue />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="Молочный Дом">Молочный Дом</SelectItem>
-                              <SelectItem value="Хлебный Мир">Хлебный Мир</SelectItem>
-                              <SelectItem value="Мясокомбинат №1">Мясокомбинат №1</SelectItem>
-                              <SelectItem value="АгроПродукт">АгроПродукт</SelectItem>
+                              <SelectItem value="ИВЛ">ИВЛ</SelectItem>
+                              <SelectItem value="ИВЛ1">ИВЛ1</SelectItem>
+                              <SelectItem value="ИВЛ2">ИВЛ2</SelectItem>
+                              <SelectItem value="ИВЛ3">ИВЛ3</SelectItem>
                             </SelectContent>
                           </Select>
                         </TableCell>
