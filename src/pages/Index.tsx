@@ -50,20 +50,19 @@ const Index = () => {
   const maxAmount = Math.max(...deliverySchedule.map(d => d.amount));
 
   return (
-    <div className="min-h-screen bg-background p-6">
-      <div className="max-w-7xl mx-auto space-y-6">
-        <header className="flex items-center justify-between">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight">Автозаказ для РЦ</h1>
-            <p className="text-muted-foreground mt-1">Дашборд управления закупками</p>
-          </div>
-          <div className="flex gap-3">
-            <Button variant="outline" size="lg">
-              <Icon name="Settings" className="mr-2" size={18} />
-              Настройки
-            </Button>
-          </div>
-        </header>
+    <div className="space-y-6">
+      <header className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Дашборд Автозаказа</h1>
+          <p className="text-muted-foreground mt-1">Мониторинг и управление закупками</p>
+        </div>
+        <div className="flex gap-3">
+          <Button variant="outline" size="lg">
+            <Icon name="Settings" className="mr-2" size={18} />
+            Настройки
+          </Button>
+        </div>
+      </header>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Card className="border-destructive/50 bg-card/50">
@@ -239,21 +238,20 @@ const Index = () => {
           </div>
         </div>
 
-        <Card className="border-muted">
-          <CardContent className="pt-6">
-            <div className="flex items-center justify-between text-xs text-muted-foreground">
-              <div className="flex items-center gap-4">
-                <span>Последнее обновление: 05.12.2025, 14:23</span>
-                <span className="flex items-center gap-1">
-                  <div className="w-2 h-2 rounded-full bg-success animate-pulse"></div>
-                  Система активна
-                </span>
-              </div>
-              <span>v2.1.0</span>
+      <Card className="border-muted">
+        <CardContent className="pt-6">
+          <div className="flex items-center justify-between text-xs text-muted-foreground">
+            <div className="flex items-center gap-4">
+              <span>Последнее обновление: 05.12.2025, 14:23</span>
+              <span className="flex items-center gap-1">
+                <div className="w-2 h-2 rounded-full bg-success animate-pulse"></div>
+                Система активна
+              </span>
             </div>
-          </CardContent>
-        </Card>
-      </div>
+            <span>v2.1.0</span>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 };
