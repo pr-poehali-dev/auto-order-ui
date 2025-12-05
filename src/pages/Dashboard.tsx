@@ -60,18 +60,18 @@ const Dashboard = () => {
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Card className={`${kpiData.ordersToCheck > 20 ? 'border-destructive/50 bg-destructive/5' : ''}`}>
+        <Card className={`transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer ${kpiData.ordersToCheck > 20 ? 'border-destructive/50 bg-destructive/5' : ''}`}>
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <CardTitle className="text-sm font-medium text-muted-foreground">
                 Заказов к проверке сегодня
               </CardTitle>
-              <Icon name="ShoppingCart" size={18} className={kpiData.ordersToCheck > 20 ? "text-destructive" : "text-primary"} />
+              <Icon name="ShoppingCart" size={18} className={`transition-transform duration-300 hover:scale-110 ${kpiData.ordersToCheck > 20 ? "text-destructive" : "text-primary"}`} />
             </div>
           </CardHeader>
           <CardContent>
             <div className="flex items-baseline gap-2">
-              <span className={`text-4xl font-bold font-mono ${kpiData.ordersToCheck > 20 ? 'text-destructive' : 'text-foreground'}`}>
+              <span className={`text-4xl font-bold font-mono transition-colors duration-300 ${kpiData.ordersToCheck > 20 ? 'text-destructive' : 'text-foreground'}`}>
                 {kpiData.ordersToCheck}
               </span>
               {kpiData.ordersToCheck > 20 && (
@@ -86,18 +86,18 @@ const Dashboard = () => {
           </CardContent>
         </Card>
 
-        <Card className="border-warning/50 bg-warning/5">
+        <Card className="border-warning/50 bg-warning/5 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <CardTitle className="text-sm font-medium text-muted-foreground">
                 Потенциальный OOS (7 дней)
               </CardTitle>
-              <Icon name="AlertCircle" size={18} className="text-warning" />
+              <Icon name="AlertCircle" size={18} className="text-warning transition-transform duration-300 hover:scale-110" />
             </div>
           </CardHeader>
           <CardContent>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-bold font-mono text-warning">{kpiData.oosRisk}</span>
+              <span className="text-4xl font-bold font-mono text-warning transition-colors duration-300">{kpiData.oosRisk}</span>
               <span className="text-sm text-muted-foreground">SKU</span>
             </div>
             <p className="text-xs text-muted-foreground mt-2">
@@ -106,20 +106,20 @@ const Dashboard = () => {
           </CardContent>
         </Card>
 
-        <Card className="border-primary/50 bg-primary/5">
+        <Card className="border-primary/50 bg-primary/5 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <CardTitle className="text-sm font-medium text-muted-foreground">
                 Охват автозаказа
               </CardTitle>
-              <Icon name="Target" size={18} className="text-primary" />
+              <Icon name="Target" size={18} className="text-primary transition-transform duration-300 hover:scale-110" />
             </div>
           </CardHeader>
           <CardContent>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-bold font-mono text-primary">{kpiData.coverage}%</span>
+              <span className="text-4xl font-bold font-mono text-primary transition-colors duration-300">{kpiData.coverage}%</span>
             </div>
-            <Progress value={kpiData.coverage} className="mt-3 h-2" />
+            <Progress value={kpiData.coverage} className="mt-3 h-2 transition-all duration-300" />
             <p className="text-xs text-muted-foreground mt-2">
               SKU под управлением системы
             </p>
@@ -144,19 +144,19 @@ const Dashboard = () => {
                 <div key={day.day} className="flex-1 flex flex-col items-center gap-2">
                   <div className="w-full flex flex-col justify-end h-48 relative group">
                     <div 
-                      className={`w-full rounded-t transition-all duration-300 hover:opacity-80 cursor-pointer ${getStatusColor(day.status)}`}
+                      className={`w-full rounded-t transition-all duration-300 hover:opacity-80 hover:scale-105 hover:shadow-lg cursor-pointer ${getStatusColor(day.status)}`}
                       style={{ 
                         height: day.amount ? `${(day.amount / maxAmount) * 100}%` : '2px',
                         minHeight: day.amount ? '20px' : '2px'
                       }}
                     >
-                      <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-popover border border-border rounded px-2 py-1 text-xs whitespace-nowrap font-mono z-10">
+                      <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-popover border border-border rounded px-2 py-1 text-xs whitespace-nowrap font-mono z-10 shadow-lg">
                         {day.amount > 0 ? `${(day.amount / 1000).toFixed(0)}к ₽` : '—'}
                       </div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-xs font-medium">{day.day}</div>
+                    <div className="text-xs font-medium group-hover:text-primary transition-colors">{day.day}</div>
                     <div className="text-xs text-muted-foreground">{day.date}</div>
                   </div>
                 </div>
@@ -195,7 +195,7 @@ const Dashboard = () => {
               {alerts.map((alert) => (
                 <Alert 
                   key={alert.id}
-                  className={alert.type === "warning" ? "border-warning bg-warning/10" : "border-primary bg-primary/10"}
+                  className={`transition-all duration-300 hover:shadow-md hover:scale-[1.02] cursor-pointer ${alert.type === "warning" ? "border-warning bg-warning/10 hover:bg-warning/20" : "border-primary bg-primary/10 hover:bg-primary/20"}`}
                 >
                   <Icon 
                     name={alert.icon as any} 

@@ -254,11 +254,11 @@ const SkuDetails = () => {
                     <div key={point.day} className="flex-1 flex flex-col items-center gap-2 relative group">
                       <div className="w-full flex flex-col justify-end h-56">
                         <div 
-                          className="w-full bg-primary/20 rounded-t transition-all duration-300 relative"
+                          className="w-full bg-primary/20 rounded-t transition-all duration-300 relative group-hover:shadow-lg group-hover:scale-105"
                           style={{ height: `${(point.forecast / maxStock) * 100}%`, minHeight: '8px' }}
                         >
                           <div 
-                            className="w-full bg-primary rounded-t absolute bottom-0"
+                            className="w-full bg-primary rounded-t absolute bottom-0 transition-all duration-300 group-hover:bg-primary/90"
                             style={{ height: `${(point.stock / point.forecast) * 100}%`, minHeight: '4px' }}
                           />
                           {point.rop && (
@@ -271,8 +271,8 @@ const SkuDetails = () => {
                         </div>
                       </div>
                       <div className="text-xs text-center">
-                        <div className="font-medium">День {point.day}</div>
-                        <div className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-full mb-2 bg-popover border rounded px-2 py-1 whitespace-nowrap">
+                        <div className="font-medium group-hover:text-primary transition-colors">День {point.day}</div>
+                        <div className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-full mb-2 bg-popover border rounded px-2 py-1 whitespace-nowrap shadow-lg">
                           Факт: {point.stock} / Прогноз: {point.forecast}
                         </div>
                       </div>
