@@ -8,7 +8,9 @@ import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/s
 import { AppSidebar } from "@/components/AppSidebar";
 import Dashboard from "./pages/Dashboard";
 import Workspace from "./pages/Workspace";
-import Orders from "./pages/Orders";
+import SkuDetails from "./pages/SkuDetails";
+import OrderJournal from "./pages/OrderJournal";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import Icon from "@/components/ui/icon";
 
@@ -45,9 +47,9 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/workspace" element={<Workspace />} />
-                <Route path="/sku-details" element={<div className="text-center py-12 text-muted-foreground"><p className="text-xl">Модуль "Детали SKU" в разработке</p></div>} />
-                <Route path="/orders" element={<Orders />} />
-                <Route path="/settings" element={<div className="text-center py-12 text-muted-foreground"><p className="text-xl">Модуль "Настройки" в разработке</p></div>} />
+                <Route path="/sku-details" element={<SkuDetails />} />
+                <Route path="/orders" element={<OrderJournal />} />
+                <Route path="/settings" element={<Settings />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
